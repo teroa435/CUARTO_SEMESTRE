@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalt Essence - Productos Naturales</title>
+    <link rel="stylesheet" href="styles.css/styles.css">
+    <link rel="icon" href="assets/img/logo.jpeg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo-container">
+            <img src="assets/img/logo.jpeg" alt="Logo Naturalt Essencen - Hoja natural" class="logo">
+            <h1>Naturalt Essencen</h1>
+        </div>
+        <p class="tagline">Cuidamos tu salud de manera natural, segura y personalizada.</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="https://www.nationalgeographic.com/health/article/probiotic-supplements-antibiotics-cancer-pregnancy" target="_blank">Noticias Ambientales</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección de introducción -->
+        <section id="inicio">
+            <h2>Bienvenidos a Naturalt Essencen</h2>
+            <article>
+                <h3>Nuestra filosofía</h3>
+                <p>En <strong>Naturalt Essencen</strong> creemos en el poder de la naturaleza para <em>sanar, nutrir y equilibrar</em> nuestro cuerpo y mente. Nuestros productos son 100% naturales, elaborados con ingredientes cuidadosamente seleccionados.</p>
+                <p>Desde hace más de <strong>10 años</strong>, nos dedicamos a investigar y desarrollar soluciones naturales que respeten tanto tu salud como el medio ambiente.</p>
+            </article>
+            
+            <div class="multimedia-container">
+                <img src="assets/img/imagen_2.jpg" alt="Paisaje natural con montañas y lago" class="main-image">
+                <video controls class="main-video">
+                    <source src="assets/video/5-MEJORES-SUPLEMENTOS-ALIMENTICIOS.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </section>
+
+        <!-- Sección de productos -->
+        <section id="productos">
+            <h2>Nuestros Productos Naturales</h2>
+            <article>
+                <h3>Categorías destacadas</h3>
+                
+                <h4>Beneficios de nuestros productos:</h4>
+                <ul>
+                    <li>Sin químicos agresivos</li>
+                    <li>Biodegradables</li>
+                    <li>Probados dermatológicamente</li>
+                    <li>Empaque ecológico</li>
+                    <li>Hechos con ingredientes orgánicos</li>
+                </ul>
+                
+                <h4>Proceso de elaboración (ordenado):</h4>
+                <ol>
+                    <li>Selección de ingredientes naturales</li>
+                    <li>Extracción de principios activos</li>
+                    <li>Elaboración artesanal</li>
+                    <li>Control de calidad</li>
+                    <li>Empaque sostenible</li>
+                </ol>
+                
+                <img src="assets/img/imagen_3.png" alt="Hierbas naturales secándose" class="product-image">
+            </article>
+        </section>
+
+        <!-- Sección de tabla de productos -->
+        <section id="tabla-productos">
+            <h2>Comparativa de Productos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Ingredientes principales</th>
+                        <th>Beneficios</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aceite esencial de lavanda</td>
+                        <td>Lavanda orgánica, aceite de almendras</td>
+                        <td>Relajación, mejora del sueño</td>
+                        <td>$15.99</td>
+                    </tr>
+                    <tr>
+                        <td>Jabón de carbón activado</td>
+                        <td>Carbón activado, aceite de coco, aceite de árbol de té</td>
+                        <td>Limpieza profunda, control de acné</td>
+                        <td>$8.50</td>
+                    </tr>
+                    <tr>
+                        <td>Crema hidratante de aloe vera</td>
+                        <td>Aloe vera puro, manteca de karité, vitamina E</td>
+                        <td>Hidratación intensa, regeneración celular</td>
+                        <td>$12.75</td>
+                    </tr>
+                    <tr>
+                        <td>Té detox de hierbas</td>
+                        <td>Diente de león, jengibre, cardo mariano</td>
+                        <td>Desintoxicación, apoyo digestivo</td>
+                        <td>$9.25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección de contacto con formulario -->
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <article>
+                <h3>¿Tienes preguntas o comentarios?</h3>
+                <p>Nos encantaría saber de ti. Completa el siguiente formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
+                
+                <form id="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="producto-interes">Producto de interés:</label>
+                        <select id="producto-interes" name="producto-interes">
+                            <option value="">Selecciona una opción</option>
+                            <option value="aceites">Aceites esenciales</option>
+                            <option value="jabones">Jabones naturales</option>
+                            <option value="cremas">Cremas hidratantes</option>
+                            <option value="tes">Tés e infusiones</option>
+                            <option value="otros">Otros productos</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="suscripcion" checked>
+                            Suscribirme al boletín mensual de Naturalt Essence
+                        </label>
+                    </div>
+                    
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </article>
+        </section>
+
+        <!-- Sección de enlaces externos -->
+        <section id="recursos">
+            <h3>Recursos adicionales sobre naturaleza</h3>
+            <p>Visita estos enlaces para aprender más sobre conservación ambiental:</p>
+            <ul>
+                <li><a href="https://www.worldwildlife.org/" target="_blank">World Wildlife Fund</a></li>
+                <li><a href="https://www.greenpeace.org/international/" target="_blank">Greenpeace International</a></li>
+                <li><a href="https://www.nationalgeographic.com/health/article/probiotic-supplements-antibiotics-cancer-pregnancy" target="_blank">National Geographic en Español</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Naturalt Essence</h3>
+                <p>Productos naturales para una vida más saludable y sostenible.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@naturaltessence.com</p>
+                <p>Teléfono: +593 962 646 660</p>
+                <p>Dirección: Calle Luis Cordero y José Urbina</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Naturalt Essence. Todos los derechos reservados.</p>
+            <p>Este es un proyecto educativo de desarrollo web.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript básico para manejar el envío del formulario
+        document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por contactarnos! Te responderemos en menos de 24 horas.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
