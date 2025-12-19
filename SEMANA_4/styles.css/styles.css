@@ -1,0 +1,305 @@
+/* styles.css - Tamaños de iconos optimizados */
+
+/* ========== NAVBAR ========== */
+/* Icono en navbar - TAMAÑO: 35px */
+.navbar-logo {
+    height: 35px; /* Reducido de 40px */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+/* ========== HERO SECTION ========== */
+/* Logo en hero - TAMAÑO: 180px */
+.hero-logo {
+    max-width: 180px; /* Reducido de 200px */
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* ========== SECCIONES ========== */
+/* Icono de sección grande - TAMAÑO: 70px */
+.section-icon {
+    width: 70px; /* Reducido de 80px */
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Icono de sección pequeño - TAMAÑO: 50px */
+.section-icon-sm {
+    width: 50px; /* Reducido de 60px */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* ========== CARDS DE SERVICIOS ========== */
+/* Icono en card - TAMAÑO: 35px */
+.service-icon {
+    width: 35px; /* Reducido de 40px */
+    height: 35px;
+}
+
+/* Contenedor icono card */
+.card-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 50%;
+    padding: 6px; /* Reducido de 8px */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+/* ========== BOTONES ========== */
+/* Icono en botón - TAMAÑO: 18px */
+.btn-icon {
+    width: 18px; /* Reducido de 20px */
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* ========== FORMULARIO ========== */
+/* Icono en formulario - TAMAÑO: 16px */
+.form-icon {
+    width: 16px; /* Reducido de 18px */
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/* Icono contacto grande - TAMAÑO: 50px */
+.contact-icon {
+    width: 50px; /* Reducido de 60px */
+    height: 50px;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+/* Icono información contacto - TAMAÑO: 18px */
+.contact-info-icon {
+    width: 18px; /* Reducido de 20px */
+    height: 18px;
+    vertical-align: middle;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* ========== LISTAS ========== */
+/* Icono en lista - TAMAÑO: 18px */
+.list-icon {
+    width: 18px; /* Reducido de 20px */
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* ========== ICONO FLOTANTE ========== */
+/* Icono flotante en imagen */
+.floating-icon {
+    position: absolute;
+    bottom: -15px; /* Ajustado */
+    left: 15px; /* Ajustado */
+    background: white;
+    border-radius: 50%;
+    padding: 8px; /* Reducido de 10px */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.floating-icon img {
+    width: 45px; /* Reducido de 50px */
+    height: 45px;
+}
+
+/* ========== FOOTER ========== */
+/* Logo en footer - TAMAÑO: 160px */
+.footer-logo img {
+    max-width: 160px; /* Reducido de 180px */
+    height: auto;
+}
+
+/* Icono sección footer - TAMAÑO: 22px */
+.footer-section-icon {
+    width: 22px; /* Reducido de 24px */
+    height: 22px;
+    vertical-align: middle;
+}
+
+/* Icono enlace footer - TAMAÑO: 14px */
+.footer-link-icon {
+    width: 14px; /* Reducido de 16px */
+    height: 14px;
+    vertical-align: middle;
+}
+
+/* Icono horario - TAMAÑO: 16px */
+.schedule-icon {
+    width: 16px; /* Reducido de 18px */
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* Iconos sociales - TAMAÑO: 32px */
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 32px; /* Reducido de 35px */
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    padding: 6px; /* Reducido de 7px */
+}
+
+/* Logo pequeño footer - TAMAÑO: 50px */
+.footer-small-logo {
+    width: 50px; /* Reducido de 60px */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Icono corazón - TAMAÑO: 14px */
+.heart-icon {
+    width: 14px; /* Reducido de 16px */
+    height: 14px;
+    vertical-align: text-bottom;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    /* Ajustes para tablet */
+    .navbar-logo {
+        height: 30px; /* Más pequeño en móvil */
+    }
+    
+    .hero-logo {
+        max-width: 140px; /* Más pequeño en móvil */
+    }
+    
+    .section-icon {
+        width: 55px; /* Más pequeño en móvil */
+    }
+    
+    .service-icon {
+        width: 30px; /* Más pequeño en móvil */
+        height: 30px;
+    }
+    
+    .floating-icon {
+        bottom: -12px;
+        left: 12px;
+        padding: 6px;
+    }
+    
+    .floating-icon img {
+        width: 35px; /* Más pequeño en móvil */
+        height: 35px;
+    }
+    
+    .btn-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .form-icon {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ajustes para móvil pequeño */
+    .hero-logo {
+        max-width: 120px;
+    }
+    
+    .section-icon {
+        width: 50px;
+    }
+    
+    .footer-logo img {
+        max-width: 140px;
+    }
+    
+    .social-icon img {
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+    }
+    
+    .footer-small-logo {
+        width: 40px;
+    }
+}
+
+/* ========== EFECTOS HOVER ========== */
+.navbar-logo:hover {
+    transform: scale(1.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+/* ========== CLASES AUXILIARES ========== */
+/* Para alinear iconos con texto */
+.icon-text-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Para iconos que deben mantenerse cuadrados */
+.icon-square {
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+/* Para iconos circulares */
+.icon-circle {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Para iconos con fondo */
+.icon-with-bg {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* Iconos en modo oscuro */
+.icon-dark {
+    filter: brightness(0.9);
+}
+
+/* Iconos en modo claro */
+.icon-light {
+    filter: brightness(1.1);
+}
