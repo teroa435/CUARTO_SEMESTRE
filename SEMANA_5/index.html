@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Interactiva con JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-images"></i> Galería Interactiva</h1>
+            <p class="subtitle">Agrega, selecciona y elimina imágenes de forma dinámica</p>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <div class="input-group">
+                    <label for="image-url"><i class="fas fa-link"></i> URL de la imagen:</label>
+                    <input type="url" id="image-url" placeholder="https://ejemplo.com/imagen.jpg" autocomplete="off">
+                    <button id="add-btn" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Agregar Imagen
+                    </button>
+                </div>
+                <div class="input-group">
+                    <p class="hint">También puedes presionar "Enter" para agregar imágenes</p>
+                </div>
+                <div class="button-group">
+                    <button id="delete-btn" class="btn btn-danger" disabled>
+                        <i class="fas fa-trash-alt"></i> Eliminar Imagen Seleccionada
+                    </button>
+                    <button id="clear-btn" class="btn btn-secondary">
+                        <i class="fas fa-broom"></i> Limpiar Galería
+                    </button>
+                </div>
+                <div class="stats">
+                    <p><i class="fas fa-chart-bar"></i> Estadísticas: <span id="image-count">0</span> imágenes en la galería</p>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2><i class="fas fa-th"></i> Galería de Imágenes</h2>
+                <div class="gallery-container">
+                    <div id="gallery" class="gallery">
+                        <div class="empty-gallery">
+                            <i class="fas fa-image"></i>
+                            <p>La galería está vacía</p>
+                            <p class="empty-hint">Agrega imágenes usando el campo de arriba</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="instructions">
+                <h3><i class="fas fa-info-circle"></i> Instrucciones de uso</h3>
+                <div class="instructions-grid">
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h4>Agregar imágenes</h4>
+                        <p>Ingresa una URL de imagen en el campo y haz clic en "Agregar Imagen" o presiona Enter.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <h4>Seleccionar imágenes</h4>
+                        <p>Haz clic en cualquier imagen para seleccionarla. Solo una imagen puede estar seleccionada a la vez.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                        <h4>Eliminar imágenes</h4>
+                        <p>Selecciona una imagen y haz clic en "Eliminar Imagen Seleccionada" para quitarla de la galería.</p>
+                    </div>
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h4>Atajos de teclado</h4>
+                        <p>Enter: Agregar imagen | Escape: Deseleccionar imagen | Delete: Eliminar imagen seleccionada</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Galería Interactiva &copy; 2023 - Desarrollado con HTML, CSS y JavaScript</p>
+            <p class="github-link">
+                <i class="fab fa-github"></i> 
+                <a href="#" target="_blank">Ver código en GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
