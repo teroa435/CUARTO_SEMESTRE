@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validación Dinámica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h1>Registro Seguro</h1>
+                <p class="subtitle">Valida tus datos en tiempo real con nuestro sistema inteligente</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <div class="progress-text">Completado: <span id="progressText">0%</span></div>
+                </div>
+            </div>
+
+            <form id="registrationForm" novalidate>
+                <div class="form-section">
+                    <h2><i class="fas fa-user-circle"></i> Información Personal</h2>
+                    
+                    <div class="form-group">
+                        <div class="input-header">
+                            <label for="nombre">
+                                <i class="fas fa-user"></i> Nombre completo
+                            </label>
+                            <span class="char-counter" id="nombre-counter">0/3</span>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            placeholder="Ej: Juan Pérez"
+                            autocomplete="name"
+                            required>
+                        <div class="validation-message" id="nombre-error">
+                            <i class="fas fa-exclamation-circle"></i> El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div class="hint">Ingresa tu nombre completo sin abreviaturas</div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-header">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Correo electrónico
+                            </label>
+                            <span class="status-icon" id="email-icon"></span>
+                        </div>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="ejemplo@correo.com"
+                            autocomplete="email"
+                            required>
+                        <div class="validation-message" id="email-error">
+                            <i class="fas fa-exclamation-circle"></i> Ingresa un correo electrónico válido
+                        </div>
+                        <div class="hint">Usaremos este email para contactarte</div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-header">
+                            <label for="edad">
+                                <i class="fas fa-birthday-cake"></i> Edad
+                            </label>
+                            <span class="status-icon" id="edad-icon"></span>
+                        </div>
+                        <div class="input-with-button">
+                            <input 
+                                type="number" 
+                                id="edad" 
+                                name="edad" 
+                                placeholder="18"
+                                min="18"
+                                max="120"
+                                autocomplete="off"
+                                required>
+                            <button type="button" class="age-btn" id="ageHelp">
+                                <i class="fas fa-question-circle"></i>
+                            </button>
+                        </div>
+                        <div class="validation-message" id="edad-error">
+                            <i class="fas fa-exclamation-circle"></i> Debes ser mayor o igual a 18 años
+                        </div>
+                        <div class="hint">Solo se permiten usuarios mayores de edad</div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2><i class="fas fa-lock"></i> Seguridad</h2>
+                    
+                    <div class="form-group">
+                        <div class="input-header">
+                            <label for="password">
+                                <i class="fas fa-key"></i> Contraseña
+                            </label>
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Crea una contraseña segura"
+                            autocomplete="new-password"
+                            required>
+                        <div class="validation-message" id="password-error">
+                            <i class="fas fa-exclamation-circle"></i> La contraseña no cumple con los requisitos
+                        </div>
+                        
+                        <div class="password-strength">
+                            <div class="strength-label">
+                                <span>Fortaleza:</span>
+                                <span id="strength-text">Débil</span>
+                            </div>
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strength-fill"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="requirements-grid">
+                            <div class="requirement" id="length-req">
+                                <i class="fas fa-circle"></i>
+                                <span>Mínimo 8 caracteres</span>
+                            </div>
+                            <div class="requirement" id="number-req">
+                                <i class="fas fa-circle"></i>
+                                <span>Al menos un número</span>
+                            </div>
+                            <div class="requirement" id="special-req">
+                                <i class="fas fa-circle"></i>
+                                <span>Un carácter especial</span>
+                            </div>
+                            <div class="requirement" id="letter-req">
+                                <i class="fas fa-circle"></i>
+                                <span>Una letra mayúscula</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-header">
+                            <label for="confirmPassword">
+                                <i class="fas fa-key"></i> Confirmar contraseña
+                            </label>
+                            <button type="button" class="toggle-password" id="toggleConfirmPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            placeholder="Repite tu contraseña"
+                            autocomplete="new-password"
+                            required>
+                        <div class="validation-message" id="confirmPassword-error">
+                            <i class="fas fa-exclamation-circle"></i> Las contraseñas no coinciden
+                        </div>
+                        <div class="match-indicator" id="match-indicator">
+                            <i class="fas fa-times"></i> Las contraseñas no coinciden
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="resetButton" class="btn btn-secondary">
+                        <i class="fas fa-redo-alt"></i> Limpiar formulario
+                    </button>
+                    <button type="submit" id="submitButton" class="btn btn-primary" disabled>
+                        <i class="fas fa-paper-plane"></i> 
+                        <span class="btn-text">Enviar registro</span>
+                        <span class="btn-loader" id="submitLoader">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="form-footer">
+                    <div class="terms-agreement">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">Acepto los <a href="#" class="terms-link">términos y condiciones</a></label>
+                    </div>
+                    <div class="security-badge">
+                        <i class="fas fa-lock"></i> Tus datos están protegidos
+                    </div>
+                </div>
+            </form>
+
+            <div class="validation-summary">
+                <h3><i class="fas fa-clipboard-check"></i> Resumen de validación</h3>
+                <div class="summary-items">
+                    <div class="summary-item" id="summary-nombre">
+                        <i class="fas fa-times"></i>
+                        <span>Nombre válido</span>
+                    </div>
+                    <div class="summary-item" id="summary-email">
+                        <i class="fas fa-times"></i>
+                        <span>Email válido</span>
+                    </div>
+                    <div class="summary-item" id="summary-password">
+                        <i class="fas fa-times"></i>
+                        <span>Contraseña segura</span>
+                    </div>
+                    <div class="summary-item" id="summary-confirm">
+                        <i class="fas fa-times"></i>
+                        <span>Contraseñas coinciden</span>
+                    </div>
+                    <div class="summary-item" id="summary-edad">
+                        <i class="fas fa-times"></i>
+                        <span>Edad válida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating-notification" id="floatingNotification">
+            <i class="fas fa-check-circle"></i>
+            <span>¡Todo listo! Formulario completo</span>
+        </div>
+    </div>
+
+    <!-- Modal de éxito -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="modal-body">
+                <h2>¡Registro Exitoso!</h2>
+                <p>Tus datos han sido validados correctamente.</p>
+                <div class="user-data">
+                    <div class="data-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <span class="data-label">Nombre</span>
+                            <span class="data-value" id="modal-nombre"></span>
+                        </div>
+                    </div>
+                    <div class="data-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="data-label">Email</span>
+                            <span class="data-value" id="modal-email"></span>
+                        </div>
+                    </div>
+                    <div class="data-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <div>
+                            <span class="data-label">Edad</span>
+                            <span class="data-value" id="modal-edad"> años</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="modal-note">Te hemos enviado un correo de confirmación a tu email.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="closeModal" class="btn btn-modal">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip de ayuda para edad -->
+    <div class="tooltip" id="ageTooltip">
+        <div class="tooltip-content">
+            <h4><i class="fas fa-info-circle"></i> Requisito de edad</h4>
+            <p>Para registrarte en nuestra plataforma debes ser mayor de 18 años. Este requisito es obligatorio por políticas de seguridad.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
